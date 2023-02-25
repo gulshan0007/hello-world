@@ -3,16 +3,33 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { TodosComponent } from './Mycomponents/todos/todos.component';
+import { TodoItemComponent } from './Mycomponents/todo-item/todo-item.component';
+import { AddTodoComponent } from './Mycomponents/add-todo/add-todo.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TodosComponent,
+    TodoItemComponent,
+    AddTodoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  title='Angular app';
+  constructor()
+  {
+    // setTimeout(() => {
+    //   this.title="gulshan app";
+    // },2000);
+    
+  }
+ }
